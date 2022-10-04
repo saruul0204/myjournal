@@ -11,8 +11,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="flex flex-col h-screen justify-between">
     <%= render 'shared/navbar' %>
       <%= yield %>
+    <%= render 'shared/footer' %>
   </body>
 </html>
