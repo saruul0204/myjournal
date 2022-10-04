@@ -75,4 +75,6 @@ group :test do
 end
 
 # project specific gems
+gem 'devise'
+gem 'email_validator'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
