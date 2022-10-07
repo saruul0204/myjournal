@@ -13,9 +13,10 @@
 
   <body class="flex flex-col h-screen justify-between">
     <%= render 'shared/navbar' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render 'shared/flash' %>
+    <div class="mb-auto bg-gray-100 flex-1">
       <%= yield %>
+    </div>
     <%= render 'shared/footer' %>
   </body>
 </html>

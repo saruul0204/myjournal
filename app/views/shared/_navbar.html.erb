@@ -5,7 +5,9 @@
     </a>
     <ul class="flex items-center hidden space-x-8 lg:flex">
       <li><%= link_to "Home", root_path, class: "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"%></li>
-      <li><%= link_to "About", pages_about_path, class: "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"%></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "Posts", posts_path, class: "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"%></li>
+      <% end %>
       <li><%= link_to "Contact us", pages_contact_path, class: "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"%></li>
       </ul>
     <ul class="flex items-center hidden space-x-8 lg:flex">

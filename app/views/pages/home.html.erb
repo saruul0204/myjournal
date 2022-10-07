@@ -1,7 +1,78 @@
-<div class="container mx-auto bg-gray-400 h-96 rounded-md flex items-center">
-      <div class="sm:ml-20 text-gray-50 text-center sm:text-left">
-        <h1 class="text-5xl font-bold mb-4">Welcome to Beauty Circle</h1>
-        <p class="text-lg inline-block sm:block">where you will find all beauty salons in Macedonia in one place.</p>
-        <%= link_to "Browse salons", root_path, class:"inline-flex items-center justify-center w-full h-12 mt-8 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-gray-500 hover:bg-gray-600 focus:shadow-outline focus:outline-none"%>
-      </div>
+<!-- component -->
+<section class="bg-white dark:bg-gray-800">
+
+
+        <div class="container flex flex-col px-6 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
+            <div class="w-full lg:w-1/2">
+                <div class="lg:max-w-lg">
+                    <h1 class="text-3xl font-bold tracking-wide text-gray-800 dark:text-white lg:text-5xl">
+                        Easiest way to create your journal
+                    </h1>
+
+                    <div class="mt-8 space-y-5">
+                        <p class="flex items-center -mx-2 text-gray-700 dark:text-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+
+                            <span class="mx-2">Write from Anywhere</span>
+                        </p>
+
+                        <p class="flex items-center -mx-2 text-gray-700 dark:text-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+
+                            <span class="mx-2">100% Private</span>
+                        </p>
+
+                        <p class="flex items-center -mx-2 text-gray-700 dark:text-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+
+                            <span class="mx-2">Easy to Use</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-center mt-4">
+                  <%= link_to "Create your journal", new_post_path, class: "inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 shadow-md bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400" %>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center w-full h-96 lg:w-1/2">
+                <img class="object-cover w-full h-full mx-auto rounded-md lg:max-w-2xl" src="https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="glasses photo">
+            </div>
+        </div>
+    </section>
+
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+    <div>
+      <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+        My Journal features
+      </p>
+    </div>
+    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+      <span class="relative inline-block">
+        <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+          <defs>
+            <pattern id="34f481be-159a-4846-821d-9ca19fb6bcc5" x="0" y="0" width=".135" height=".30">
+              <circle cx="1" cy="1" r=".7"></circle>
+            </pattern>
+          </defs>
+          <rect fill="url(#34f481be-159a-4846-821d-9ca19fb6bcc5)" width="52" height="24"></rect>
+        </svg>
+        <span class="relative">What are you writing for?</span>
+      </span>
+    </h2>
+    <p class="text-base text-gray-700 md:text-lg">
+      Whether you’re looking for a tool to record your daily emotions and activities in a reflective journal, keep track of milestones in a food diary or pregnancy journal, or even record your dreams in a dream journal, My Journal has you covered. My Journal gives you all the tools you need to focus on the ideas you want to preserve, rather than the process of writing itself.
+    </p>
+  </div>
+
+  <div class="text-center">
+    <%= link_to "Get started", new_user_registration_path, class:"inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 shadow-md md:w-auto bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400"%>
+  </div>
 </div>
