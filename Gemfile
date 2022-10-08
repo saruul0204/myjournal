@@ -78,3 +78,4 @@ end
 gem 'devise'
 gem 'email_validator'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'letter_opener'
