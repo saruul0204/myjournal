@@ -1,10 +1,13 @@
 class PostsController < ApplicationController
+  include Pagy::Backend
+
   before_action :set_post, only: %i[ show edit update destroy ]
   before_action :authenticate_user!
 
 
   def index
     @posts = current_user.posts
+    @pagy, @posts = pagy(current_user.posts.order(created_at: :desc))
   end
 
   def show
