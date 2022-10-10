@@ -1,7 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "pagy";
 
 .error-message {
   @apply bg-red-100 text-xs text-red-500 pl-2 py-2 mb-2 rounded text-left;
+}
+
+.pagy-nav {
+  @apply mt-4 flex space-x-2;
+}
+
+.pagy-nav .page a {
+  @apply block px-3 py-2 mx-1 font-medium text-gray-700 bg-white rounded-md;
+}
+
+.pagy-nav .page.prev.disabled,
+.pagy-nav .page.next.disabled {
+  @apply px-3 py-2 mx-1 font-medium text-white bg-blue-500 rounded-md cursor-not-allowed;
+}
+
+.pagy-nav .page.active {
+  @apply px-3 py-2 mx-1 font-medium bg-blue-500 text-white rounded-md;
 }

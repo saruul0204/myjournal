@@ -1,6 +1,6 @@
 
-<div class="text-center mt-8">
-  <%= link_to new_post_path, class:"inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 shadow-md md:w-auto bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400" do %>
+<div class="text-center mt-8 mx-auto">
+  <%= link_to new_post_path, class:"inline-flex items-center justify-center lg:w-6/12 h-12 px-6 font-medium tracking-wide text-white transition duration-200 shadow-md bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400" do %>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
       <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
     </svg>
@@ -12,7 +12,7 @@
 <div aria-label="group of cards" class="focus:outline-none py-8 space-y-6 w-full">
     <div class="items-center justify-center w-full">
       <% @posts.each do |post| %>
-        <div aria-label="card 1" class="hover:shadow-lg transform transition duration-500 hover:scale-105 focus:outline-none lg:w-6/12 mx-auto my-6 bg-white dark:bg-gray-800  p-6 shadow rounded">
+        <div aria-label="card 1" class="hover:shadow-lg transform transition duration-500 hover:scale-105 focus:outline-none lg:w-6/12 mx-auto my-6 bg-white dark:bg-gray-800  p-6 shadow rounded-md">
           <div class="flex items-center border-b border-gray-200 dark:border-gray-700  pb-6">
             <div class="w-6 h-6 bg-gray-200 dark:bg-gray-900  rounded-full flex flex-shrink-0"></div>
             <div class="flex items-start justify-between w-full">
@@ -40,4 +40,8 @@
           </div>
         </div>
       <% end %>
-</div>
+    </div>
+    <div class="grid place-items-center">
+      <%== pagy_nav(@pagy) unless @posts.empty? %>
+    </div>
+  </div>
