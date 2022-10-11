@@ -47,7 +47,7 @@
               <li><%= link_to 'My records', posts_path, aria:{ label:"Browse salons" }, title:"Browse salons", class:"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-pink-600"%></li>
               <li><%= link_to 'Contact  ', pages_contact_path, aria:{ label:"Contact" }, title:"Contact", class:"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-pink-600"%></li>
                <% if user_signed_in? %>
-                  <li><%= link_to t('.sign_out'), destroy_user_session_path, method: :delete, class:"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-pink-600" %></li>
+                  <li><%= link_to t('.sign_out'), destroy_user_session_path, data: { turbo_method: :delete } , class:"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-pink-600" %></li>
                  <% else %>
                   <li><%= link_to t('.sign_in'), new_user_session_path, aria:{ label:"Sign in" }, title:"Sign in", class:"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-pink-600"%></li>
                   <li><%= link_to t('.sign_up'), new_user_registration_path, class:"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-pink-600", aria:{ label:"Sign up" }, title:"Sign up"%></li>
