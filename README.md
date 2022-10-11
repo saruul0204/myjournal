@@ -12,8 +12,6 @@ Topic of the project: My journal is web application for writing and keeping an o
 
 ### **Prerequisites:**
 - Git
-- Node
-- Yarn
 - Postgresql
 - Terminal
 
@@ -21,7 +19,7 @@ Topic of the project: My journal is web application for writing and keeping an o
 - Ruby
 - Rails
 - TailwindCSS
-- 
+
 ### **How to launch `Myjournal`?**
 - Clone the [repository](git@github.com:saruul0204/myjournal.git)
 - Make sure you have the suitable version for the project (as stated above)
